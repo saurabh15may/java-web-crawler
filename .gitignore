@@ -1,0 +1,16 @@
+.gradle
+!gradle/wrapper/gradle-wrapper.jar
+.springBeans
+
+*.class
+/build/
+/bin/
+/.settings/
+.project
+.classpath
+target
+
+# Package Files
+*.jar
+*.war
+*.ear
