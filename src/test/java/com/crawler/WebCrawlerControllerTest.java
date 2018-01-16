@@ -45,13 +45,17 @@ public class WebCrawlerControllerTest {
 	}
 
 	@Test
-	public void ParameterIsParsable() {
-		assertTrue(WebCrawlerController.isParameterParsable("3"));
+	public void ParameterIsParsableAndInRange() {
+		assertTrue(WebCrawlerController.isParameterParsableAndInRange("1"));
+		assertTrue(WebCrawlerController.isParameterParsableAndInRange("20"));
 	}
 
 	@Test
-	public void ParameterIsNotParsable() {
-		assertFalse(WebCrawlerController.isParameterParsable("xy"));
-		assertFalse(WebCrawlerController.isParameterParsable("ab"));
+	public void ParameterIsNotParsableAndInRange() {
+		assertFalse(WebCrawlerController.isParameterParsableAndInRange("xy"));
+		assertFalse(WebCrawlerController.isParameterParsableAndInRange("ab"));
+
+		assertFalse(WebCrawlerController.isParameterParsableAndInRange("-1"));
+		assertFalse(WebCrawlerController.isParameterParsableAndInRange("21"));
 	}
 }

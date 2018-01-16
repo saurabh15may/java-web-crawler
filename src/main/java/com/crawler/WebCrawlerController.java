@@ -38,8 +38,8 @@ public class WebCrawlerController {
 			throw new IllegalArgumentException("The 'depth' parameter must not be null or empty");
 		}
 
-		if (!isParameterParsable(depth)) {
-			throw new NumberFormatException("The 'depth' parameter should be a number");
+		if (!isParameterParsableAndInRange(depth)) {
+			throw new NumberFormatException("The 'depth' parameter should be a number between 1 to 20");
 		}
 
 		PageTree responseData = null;
@@ -70,9 +70,11 @@ public class WebCrawlerController {
 		return (depth == null || depth.isEmpty());
 	}
 
-	public static boolean isParameterParsable(String param) {
+	public static boolean isParameterParsableAndInRange(String param) {
 		try {
-			Integer.parseInt(param);
+			int depth = Integer.parseInt(param);
+			if (depth < 0 || depth > 20)
+				return false;
 		} catch (NumberFormatException e) {
 			return false;
 		}
