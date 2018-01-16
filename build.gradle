@@ -30,4 +30,7 @@ dependencies {
 	compile group: 'org.jsoup', name: 'jsoup', version: '1.7.2'
     
     compile group: 'com.google.code.gson', name: 'gson', version: '2.3.1'
+    
+	compile group: 'commons-validator', name: 'commons-validator', version: '1.4.0'
+
 }
