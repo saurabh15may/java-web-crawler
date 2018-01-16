@@ -31,8 +31,8 @@ http://localhost:8080/crawl?url=https://saurabh1.com&depth=-5
 http://localhost:8080/crawl?url=https://saurabh1.com&depth=100
 ```
 
-#### Also deployed to AWS Elastic Beanstack. To test the REST endpoint please access the URL below. 
+#### Also deployed to AWS Elastic Beanstalk. To test the REST endpoint please access the URL below. 
 
 >http://webcrawler-env-1.kbx6mmxw5r.ap-southeast-2.elasticbeanstalk.com/crawl?url=XXXX&depth=XXXX
 
->http://webcrawler-env-1.kbx6mmxw5r.ap-southeast-2.elasticbeanstalk.com/crawl?url=https://saurabh1.com&depth=2
+>http://webcrawler-env-1.kbx6mmxw5r.ap-southeast-2.elasticbeanstalk.com/crawl?url=https://saurabh1.com&depth=1
